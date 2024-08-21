@@ -1,4 +1,4 @@
-name: CheckTestServer
+name: 'Main Checks Actions'
 on:
   push:
     branches:

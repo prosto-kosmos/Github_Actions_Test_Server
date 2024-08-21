@@ -1,4 +1,4 @@
-name: 'Latest Docker Image - master'
+name: 'Latest Docker Build (master)'
 
 on:
   push:
@@ -23,6 +23,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: prosto-kosmos/test-server:latest
+          tags: prostokosmos/test-server:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

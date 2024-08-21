@@ -28,6 +28,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: prosto-kosmos/test-server:${{ env.PR_NUMBER }}
+          tags: prostokosmos/test-server:${{ env.PR_NUMBER }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
