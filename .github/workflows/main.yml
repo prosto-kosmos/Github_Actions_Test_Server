@@ -26,7 +26,7 @@ jobs:
       - name: Install
         uses: ./.github/actions/prepare
       - name: Build
-        run: npm run build
+        run: npm run build --prod
 
   lint:
     name: Validate code style
