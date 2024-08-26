@@ -1,5 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Record } from '@prisma/client';
 
 @Controller()
 export class AppController {
@@ -7,6 +8,11 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return 'Hello world!';
+  }
+
+  @Get('api/records')
+  async getRecords(): Promise<Record[]> {
+    return await this.appService.getRecords();
   }
 }
